@@ -1,0 +1,5 @@
+from itertools import combinations
+
+class Solution:
+    def threeSum(self, numbers: List[int]) -> List[List[int]]:
+        return set(tuple(n) for n in combinations(sorted(numbers), 3) if sum(n) == 0)
