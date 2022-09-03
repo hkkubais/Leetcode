@@ -1,0 +1,8 @@
+class Solution:
+    def reverseString(self, s, l=0, hi=None):
+        if hi == None:
+            hi = len(s) - 1
+        if hi <= l:
+            return s
+        s[l], s[hi] = s[hi], s[l]
+        return self.reverseString(s, l + 1, hi - 1)
